@@ -4,20 +4,16 @@ import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 subtle-grid opacity-30" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-pulse-glow animation-delay-200" />
-      
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
 
       <div className="container relative z-10 px-6 pt-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-card/40 backdrop-blur-sm mb-8 animate-fade-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs font-medium text-muted-foreground tracking-wide uppercase">
+            <span className="text-xs font-medium text-primary tracking-wide uppercase">
               Application-Only Access
             </span>
           </div>
@@ -42,7 +38,7 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4" />
             </Button>
             <Button variant="heroOutline" size="xl">
-              View Framework
+              View Pricing
             </Button>
           </div>
 
@@ -67,7 +63,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
     </section>
   );
 };
